@@ -31,7 +31,7 @@ def ReverseEachWordSeparately(my_list):
   #Revesre last word
   ReverseList(my_list, startP, len(my_list)-1)
 
-# MAIN
+########### MAIN ###########
 
 orig_list = ['p','e','r','f','e','c','t',' ',
             'm','a','k','e','s', ' ',
@@ -47,6 +47,8 @@ print('After:')
 PrintMyList(orig_list)
 
 ########### STDOUT ###########
+
 #Before:
-#perfect makes practiceAfter:
+#perfect makes practice
+#After:
 #practice makes perfect
