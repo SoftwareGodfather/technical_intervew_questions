@@ -25,12 +25,11 @@ def GetSmallestIndexUsingSet(arr, smallestIndexSet):
     if (arr[i] < arr[minIndex]) and (i not in smallestIndexSet):
       minIndex = i
   smallestIndexSet.add(minIndex)
-  return minIndex
 
 def GetNSmallestNumberInPlaceNoArrModification(arr, n):
   smallestIndexSet = set()
   for i in range(0, n):
-    minIndex = GetSmallestIndexUsingSet(arr, smallestIndexSet)
+    GetSmallestIndexUsingSet(arr, smallestIndexSet)
 
   res = [arr[elem] for elem in smallestIndexSet]
   return res
