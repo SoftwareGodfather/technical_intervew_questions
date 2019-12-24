@@ -1,6 +1,6 @@
 import math
 from collections import namedtuple
-import queue
+import heapq
 point = namedtuple('Point', ['x', 'y'])
 
 def GetDistance(a, b):
@@ -8,13 +8,24 @@ def GetDistance(a, b):
 
 ########### MAIN ###########
 
-points = [point(1,2), point(3,-1), point(2,1), point(2,3)]
+points = [point(1,2), point(3,-1), point(2,1), point(2,5)]
 center = point(2,2)
 closestsPoints = 2
 
-distArr = queue.PriorityQueue()
-for i in range(0,len(points)):
-  distArr.put((GetDistance(points[i], center), points[i]))
+#Heap - Using negative dist weights for Max Heap property
+distArr = []
+for i in range(0,len(points)): #O(nlogk)
+  currentDist = GetDistance(points[i], center) * -1
+  if(len(distArr) < closestsPoints):
+    heapq.heappush(distArr, (currentDist, points[i])) #O(1)
+  else:
+    heapq.heappushpop(distArr, (currentDist, points[i])) #O(logk)
 
-while not distArr.empty():
-    print(distArr.get())
+#O(klogk)
+while(len(distArr)):
+  print(heapq.heappop(distArr)[1])
+
+########### STDOUT ###########
+
+#Point(x=1, y=2)
+#Point(x=2, y=1)
