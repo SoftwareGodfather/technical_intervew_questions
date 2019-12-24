@@ -21,7 +21,7 @@ def NSmallestInSetWithHeap(myNumberSet, smallestSet):
   for elem in myNumberSet:
     if(len(myHeap) < smallestSet):
       heapq.heappush(myHeap, elem*-1)
-    elif(elem < myHeap[0]):
+    elif(elem*-1 > myHeap[0]):
       heapq.heappushpop(myHeap, elem*-1)
   
   return heapq.heappop(myHeap)*-1
