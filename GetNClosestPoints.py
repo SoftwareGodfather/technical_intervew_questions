@@ -18,7 +18,7 @@ for i in range(0,len(points)): #O(nlogk)
   currentDist = GetDistance(points[i], center) * -1
   if(len(distArr) < closestsPoints):
     heapq.heappush(distArr, (currentDist, points[i])) #O(1)
-  else:
+  elif(currentDist > distArr[0][0]):
     heapq.heappushpop(distArr, (currentDist, points[i])) #O(logk)
 
 #O(klogk)
