@@ -1,4 +1,4 @@
-def FindLongestConsequtiveCaharcters(arr):
+def FindLongestConsecutiveCharacters(arr):
   previous = None
   currentNum = 0
   longestNum = 0
@@ -16,17 +16,17 @@ def FindLongestConsequtiveCaharcters(arr):
 
     previous = c
   
-  print(f'Longest Consequtive Char: {longestChar}')
+  print(f'Longest Consecutive Char: {longestChar}')
 
 ########### MAIN ###########
 
 arr = 'gaabsdftreeertte'
-print('Longest Consequtive Caharcters')
+print('Longest Consecutive Characters')
 print(arr)
-FindLongestConsequtiveCaharcters(arr)
+FindLongestConsecutiveCharacters(arr)
 
 ########### STDOUT ###########
 
-#Longest Consequtive Caharcters
+#Longest Consecutive Characters
 #gaabsdftreeertte
 #Longest Consequtive Char: e
