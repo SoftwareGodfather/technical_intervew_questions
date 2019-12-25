@@ -1,4 +1,3 @@
-
 from collections import namedtuple
 
 def getKey(meet):
@@ -19,12 +18,18 @@ def MaximizeByMeetingNumber(meetings, totalHours):
             break
     return meetingList
 
+def MaximizeByMeetingNumber(meetings, totalHours):
+    pass
+    
 ########### MAIN ###########
 
 meeting = namedtuple('Meeting', ['name', 'hours'])
 meetings = [meeting('first',2), meeting('second',1), meeting('third',3)]
 
 meetingList = MaximizeByMeetingNumber(meetings, 4)
+print(meetingList)
+
+meetingList = MaximizeByMeetingHours(meetings, 4)
 print(meetingList)
 
 ########### STDOUT ###########
