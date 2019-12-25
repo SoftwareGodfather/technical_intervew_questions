@@ -39,8 +39,7 @@ def FindSubstringFromPosition(strA, strB, pointA, pointB, mapLocB):
 
 def LongestSubSequence(strA, strB, mapLocB):
     allResults = []
-    for indA, charA in enumerate(strA):
-        pointA = indA
+    for pointA, charA in enumerate(strA):
         #pointB = strB.find(charA)
         pointB = FindCharInStringUsingMap(charA, mapLocB, 0)
         if(pointB != -1):
