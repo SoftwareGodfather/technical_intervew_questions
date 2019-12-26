@@ -18,7 +18,7 @@ def MaximizeByMeetingNumber(meetings, totalHours):
             break
     return meetingList
 
-def MaximizeByMeetingNumber(meetings, totalHours):
+def MaximizeByMeetingHours(meetings, totalHours):
     pass
     
 ########### MAIN ###########
