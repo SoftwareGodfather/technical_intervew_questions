@@ -1,8 +1,7 @@
 import collections
 
 class Graph:
-    def __init__(self, V):
-        self.V = V
+    def __init__(self):
         self.graph = collections.defaultdict(list)
 
     def AddEdge(self, v, w):
@@ -82,7 +81,7 @@ class Graph:
 
 # Driver program to test above functions 
 
-g1 = Graph(5) 
+g1 = Graph() 
 g1.AddEdge(0, 1)
 g1.AddEdge(0, 2)
 g1.AddEdge(0, 3)
