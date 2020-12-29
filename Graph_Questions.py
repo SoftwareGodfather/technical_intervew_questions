@@ -14,6 +14,22 @@ class Graph:
     def HandleElem(self, elem):
         print(elem)
 
+    def print_levels_of_tree(self, root):
+        queue = collections.deque()
+        queue.appendleft((root,0))
+        printed_level = 0
+        single_level_elements = []
+        while queue:
+            element, level = queue.pop()
+            if printed_level < level:
+                print(single_level_elements)
+                single_level_elements = []
+            single_level_elements.append(element)
+            for child in self.graph[element]:
+                queue.appendleft((child, level + 1))
+            printed_level = level
+        print(single_level_elements)
+              
     def BFS(self, root):
         print('BFS')
         parent = dict()
