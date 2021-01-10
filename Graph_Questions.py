@@ -6,7 +6,6 @@ class Graph:
 
     def AddEdge(self, v, w):
         self.graph[v].append(w)
-        self.graph[w].append(v)
 
     def HandleElemDict(self, elem):
         print(f'data:{elem["data"]}, level:{elem["level"]}')
